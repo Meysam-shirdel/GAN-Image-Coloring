@@ -1,7 +1,7 @@
 
 
 <div align="center">
-    <img src="title.jpg" alt="Logo" width="500" height="200">
+    <img src="title.jpg" alt="Logo" >
   </a>
 
 <h1 align="center"> Image Coloring</h1>
