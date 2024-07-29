@@ -18,12 +18,13 @@ Generator: The generator network takes a grayscale image as input and tries to g
 
 Discriminator: The discriminator network takes an image (either real colored image or the generated colored image) and tries to distinguish between the real and the generated images. The discriminator's goal is to correctly classify the images as real or fake.
 
-The generator and discriminator networks are initialized with random weights. The discriminator is trained on a batch of real colored images and a batch of generated colored images (produced by the generator from grayscale inputs). The discriminator updates its weights to improve its ability to distinguish between real and fake images. The generator takes a batch of grayscale images and generates colored versions. These generated images are then fed into the discriminator. The generator updates its weights based on the discriminator's feedback, aiming to produce more realistic colored images that can fool the discriminator.
-
 <div align="center">
     <img src="model.jpg" alt="Logo" >
 <h3 align="center"> proposed method architecture</h3>
 </div>
+
+The generator and discriminator networks are initialized with random weights. The discriminator is trained on a batch of real colored images and a batch of generated colored images (produced by the generator from grayscale inputs). The discriminator updates its weights to improve its ability to distinguish between real and fake images. The generator takes a batch of grayscale images and generates colored versions. These generated images are then fed into the discriminator. The generator updates its weights based on the discriminator's feedback, aiming to produce more realistic colored images that can fool the discriminator.
+
 
 ## 4. Implementation
 This section delves into the practical aspects of the project's implementation.
