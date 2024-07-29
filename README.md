@@ -10,7 +10,11 @@
 Image coloring using Generative Adversarial Networks (GANs) is a technique where a GAN architecture is employed to add color to grayscale images. GANs consist of two neural networks, a generator and a discriminator, which are trained together in a competitive setting. The generator network takes a grayscale image as input and tries to generate a colored version of it. The goal of the generator is to produce images that are as realistic as possible. The discriminator network takes an image (either real colored image or the generated colored image) and tries to distinguish between the real and the generated images. The discriminator's goal is to correctly classify the images as real or fake.
 
 ## 3. The Proposed Method
-We used a GAN-Based architecture for solving the problem. It covers the algorithms, techniques, or deep learning models to be applied, explaining how they address the problem and why they were chosen.
+A GAN-Based architecture is used in this task for solving the problem. 
+
+# Overview of GAN Architecture
+Generator: The generator network takes a grayscale image as input and tries to generate a colored version of it. The goal of the generator is to produce images that are as realistic as possible.
+Discriminator: The discriminator network takes an image (either real colored image or the generated colored image) and tries to distinguish between the real and the generated images. The discriminator's goal is to correctly classify the images as real or fake.
 <div align="center">
     <img src="model.jpg" alt="Logo" >
 <h3 align="center"> proposed method architecture</h3>
