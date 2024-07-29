@@ -32,7 +32,7 @@ The generator takes a batch of grayscale images and generates colored versions. 
 This section delves into the practical aspects of the project's implementation.
 
 ### 4.1. Dataset
-Dataset contains 10 colorless human character icons. Every input image has 25 identical sample of colored with different patterns. 
+Dataset contains 10 colorless human character icons as input. Every input image has 25 identical sample of colored with different patterns. 
 
 Metadata.csv involves information about every input and output image. 
 - **input:** name of input image
@@ -40,7 +40,7 @@ Metadata.csv involves information about every input and output image.
 - **hair:** indicates the color of hair
 - **shirt:** indicates the color of shirt
 
-
+hair and shirt colors are converted to one-hot encoding and are concatenated with the input image to feed into Generator.
 ### 4.2. Model
 In this subsection, the architecture and specifics of the deep learning model employed for the segmentation task are presented. It describes the model's layers, components, libraries, and any modifications made to it.
 
