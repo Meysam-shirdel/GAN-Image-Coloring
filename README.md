@@ -23,15 +23,23 @@ Discriminator: The discriminator network takes an image (either real colored ima
 <h3 align="center"> proposed method architecture</h3>
 </div>
 
-The generator and discriminator networks are initialized with random weights. The discriminator is trained on a batch of real colored images and a batch of generated colored images (produced by the generator from grayscale inputs). The discriminator updates its weights to improve its ability to distinguish between real and fake images. The generator takes a batch of grayscale images and generates colored versions. These generated images are then fed into the discriminator. The generator updates its weights based on the discriminator's feedback, aiming to produce more realistic colored images that can fool the discriminator.
+The generator and discriminator networks are initialized with random weights. The discriminator is trained on a batch of real colored images and a batch of generated colored images (produced by the generator from grayscale inputs). The discriminator updates its weights to improve its ability to distinguish between real and fake images. 
+
+The generator takes a batch of grayscale images and generates colored versions. These generated images are then fed into the discriminator. The generator updates its weights based on the discriminator's feedback, aiming to produce more realistic colored images that can fool the discriminator.
 
 
 ## 4. Implementation
 This section delves into the practical aspects of the project's implementation.
 
 ### 4.1. Dataset
-Under this subsection, you'll find information about the dataset used for the medical image segmentation task. It includes details about the dataset source, size, composition, preprocessing, and loading applied to it.
-[Dataset](https://www.kaggle.com/competitions/uw-madison-gi-tract-image-segmentation/data)
+Dataset contains 10 colorless human character icons. Every input image has 25 identical sample of colored with different patterns. 
+
+Metadata.csv involves information about every input and output image. 
+- **input:** name of input image
+- **output:** name of output image
+- **hair:** indicates the color of hair
+- **shirt:** indicates the color of shirt
+
 
 ### 4.2. Model
 In this subsection, the architecture and specifics of the deep learning model employed for the segmentation task are presented. It describes the model's layers, components, libraries, and any modifications made to it.
