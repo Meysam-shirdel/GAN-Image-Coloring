@@ -81,6 +81,16 @@ This subsection, is presenting the architecture and specific components of model
 ### 4.3. Configurations
 This part outlines the configuration settings used for training and evaluation. It includes information on hyperparameters, optimization algorithms, loss function, metric, and any other settings that are crucial to the model's performance.
 
+<div align="center">
+    <img src="Train Generator.jpg" alt="Logo" >
+<h3 align="center"> Train architecture of Generator</h3>
+</div>
+
+<div align="center">
+    <img src="Train Discriminator.jpg" alt="Logo" >
+<h3 align="center"> Train architecture of Discriminator</h3>
+</div>
+
 ### 4.4. Train
 Here, you'll find instructions and code related to the training of the segmentation model. This section covers the process of training the model on the provided dataset.
 
