@@ -46,39 +46,36 @@ This subsection, is presenting the architecture and specific components of model
 
 - Generator
 
-
-    class Generator(nn.Module):
-      def __init__(self, in_channels=13):
-        super().__init__()
-        # Encoder
-        nc = [in_channels, 64, 128, 256, 512, 512, 512, 512, 512]
-        self.encoders = nn.ModuleList([   EncoderBlock(nc[i-1], nc[i], batchnorm=False if i==1 else True) for i in range(1, len(nc)) ])
-        # Decoder
-        nc.reverse()
-        self.decoders = nn.ModuleList([ DecoderBlock(2*nc[i-1] if i>1 else nc[i-1], nc[i], dropout=True if i<4 else False) for i in range(1, len(nc[:-1])) ])
-        self.last = nn.ConvTranspose2d(128, 3, kernel_size=4, stride=2, padding=1)
-        self.tanh = nn.Tanh()
-
+        class Generator(nn.Module):
+          def __init__(self, in_channels=13):
+            super().__init__()
+            # Encoder
+            nc = [in_channels, 64, 128, 256, 512, 512, 512, 512, 512]
+            self.encoders = nn.ModuleList([   EncoderBlock(nc[i-1], nc[i], batchnorm=False if i==1 else True) for i in range(1, len(nc)) ])
+            # Decoder
+            nc.reverse()
+            self.decoders = nn.ModuleList([ DecoderBlock(2*nc[i-1] if i>1 else nc[i-1], nc[i], dropout=True if i<4 else False) for i in range(1, len(nc[:-1])) ])
+            self.last = nn.ConvTranspose2d(128, 3, kernel_size=4, stride=2, padding=1)
+            self.tanh = nn.Tanh()
 
 - Discriminator
-
   
       class Discriminator(nn.Module):
-      def __init__(self, in_channels=16):
-        super().__init__()
-        nc = [in_channels, 64, 128, 256]
-        self.layers = nn.ModuleList([ EncoderBlock(nc[i-1], nc[i], batchnorm=True if i>1 else False) for i in range(1, len(nc))  ])
-    
-        self.layers += nn.Sequential(
-            nn.ZeroPad2d(padding=1),
-            nn.Conv2d(256, 512, kernel_size=4, bias=False),
-            nn.BatchNorm2d(512),
-            nn.LeakyReLU(0.2))
-    
-        self.layers += nn.Sequential(
-            nn.ZeroPad2d(1),
-            nn.Conv2d(512, 1, kernel_size=4)
-        )
+          def __init__(self, in_channels=16):
+            super().__init__()
+            nc = [in_channels, 64, 128, 256]
+            self.layers = nn.ModuleList([ EncoderBlock(nc[i-1], nc[i], batchnorm=True if i>1 else False) for i in range(1, len(nc))  ])
+        
+            self.layers += nn.Sequential(
+                nn.ZeroPad2d(padding=1),
+                nn.Conv2d(256, 512, kernel_size=4, bias=False),
+                nn.BatchNorm2d(512),
+                nn.LeakyReLU(0.2))
+        
+            self.layers += nn.Sequential(
+                nn.ZeroPad2d(1),
+                nn.Conv2d(512, 1, kernel_size=4)
+            )
 
         
 ### 4.3. Configurations
