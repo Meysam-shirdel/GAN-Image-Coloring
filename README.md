@@ -45,7 +45,8 @@ hair and shirt colors are converted to one-hot encoding and are concatenated wit
 This subsection, is presenting the architecture and specific components of model. 
 
 - Generator
-  
+
+
     class Generator(nn.Module):
       def __init__(self, in_channels=13):
         super().__init__()
@@ -58,9 +59,11 @@ This subsection, is presenting the architecture and specific components of model
         self.last = nn.ConvTranspose2d(128, 3, kernel_size=4, stride=2, padding=1)
         self.tanh = nn.Tanh()
 
+
 - Discriminator
+
   
-    class Discriminator(nn.Module):
+      class Discriminator(nn.Module):
       def __init__(self, in_channels=16):
         super().__init__()
         nc = [in_channels, 64, 128, 256]
