@@ -10,7 +10,7 @@
 Image coloring using Generative Adversarial Networks (GANs) is a technique where a GAN architecture is employed to add color to grayscale images. GANs consist of two neural networks, a generator and a discriminator, which are trained together in a competitive setting. The generator network takes a grayscale image as input and tries to generate a colored version of it. The goal of the generator is to produce images that are as realistic as possible. The discriminator network takes an image (either real colored image or the generated colored image) and tries to distinguish between the real and the generated images. The discriminator's goal is to correctly classify the images as real or fake.
 
 ## 3. The Proposed Method
-A GAN-Based architecture is used in this task for solving the problem. 
+A Conditional GAN-Based architecture is used in this task for solving the problem. We add a condition to the inputs of Generator and Discriminator.
 
 ### Overview of GAN Architecture
   
@@ -25,7 +25,7 @@ Discriminator: The discriminator network takes an image (either real colored ima
 
 The generator and discriminator networks are initialized with random weights. The discriminator is trained on a batch of real colored images and a batch of generated colored images (produced by the generator from grayscale inputs). The discriminator updates its weights to improve its ability to distinguish between real and fake images. 
 
-The generator takes a batch of grayscale images and generates colored versions. These generated images are then fed into the discriminator. The generator updates its weights based on the discriminator's feedback, aiming to produce more realistic colored images that can fool the discriminator.
+The generator takes a batch of grayscale images concatenated with the conditions( embedings of hair and shirt color) and generates colored versions. These generated images and target images are concatenated with a colorless sketch of target image and then at each moment, one of these combinations is concatenated with the conditions again and is fed into the discriminator. The generator updates its weights based on the discriminator's feedback, aiming to produce more realistic colored images that can fool the discriminator.
 
 
 ## 4. Implementation
