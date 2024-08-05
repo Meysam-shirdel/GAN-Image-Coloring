@@ -47,7 +47,6 @@ This subsection, is presenting the architecture and specific components of model
 - Generator
   
     class Generator(nn.Module):
-  
       def __init__(self, in_channels=13):
         super().__init__()
         # Encoder
@@ -62,7 +61,6 @@ This subsection, is presenting the architecture and specific components of model
 - Discriminator
   
     class Discriminator(nn.Module):
-    
       def __init__(self, in_channels=16):
         super().__init__()
         nc = [in_channels, 64, 128, 256]
