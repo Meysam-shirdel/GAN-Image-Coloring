@@ -40,7 +40,7 @@ Metadata.csv involves information about every input and output image.
 - **hair:** indicates the color of hair
 - **shirt:** indicates the color of shirt
 
-hair and shirt colors are converted to one-hot encoding and are concatenated with the input image to feed into Generator.
+hair and shirt colors are converted to one-hot encoding and are concatenated with the input image to feed into Generator and Discriminator.
 ### 4.2. Model
 In this subsection, the architecture and specifics of the deep learning model employed for the segmentation task are presented. It describes the model's layers, components, libraries, and any modifications made to it.
 
