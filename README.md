@@ -95,7 +95,11 @@ This part demostrates the costumized loss configuration used for training and op
 
 
 ### 4.4. Train
-Here, you'll find instructions and code related to the training of the segmentation model. This section covers the process of training the model on the provided dataset.
+The model trained for 50 epochs with lr = 0.0002. Best Generator's train loss obtained 2.44 in epoch=48. Best validation loss was 0.01685 in epoch=37. The learning curve for Generator and Discriminator is as below.
+
+<div align="center">
+    <img src="loss.jpg" alt="Logo" >
+</div>
 
 ### 4.5. Evaluate
 In the evaluation section, the methods and metrics used to assess the model's performance are detailed. It explains how the model's segmentation results are quantified and provides insights into the model's effectiveness.
