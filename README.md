@@ -79,7 +79,7 @@ This subsection, is presenting the architecture and specific components of model
 
         
 ### 4.3. Configurations
-This part outlines the configuration settings used for training and evaluation. It includes information on hyperparameters, optimization algorithms, loss function, metric, and any other settings that are crucial to the model's performance.
+This part demostrates the costumized loss configuration used for training and optimization of the entier model. It includes information on optimization algorithms, loss function, metric, and any other settings that are crucial to the model's performance.
 
 <div align="center">
     <img src="Train Generator.jpg" alt="Logo" >
@@ -90,6 +90,9 @@ This part outlines the configuration settings used for training and evaluation. 
     <img src="Train Discriminator.jpg" alt="Logo" >
 <h3 align="center"> Train architecture of Discriminator</h3>
 </div>
+
+-**Metric:**  optim.Adam(generator.parameters(), lr=2e-4, betas=(0.5, 0.999)) , optim.Adam(generator.parameters(), lr=2e-4, betas=(0.5, 0.999))
+
 
 ### 4.4. Train
 Here, you'll find instructions and code related to the training of the segmentation model. This section covers the process of training the model on the provided dataset.
