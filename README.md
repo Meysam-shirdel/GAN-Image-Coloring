@@ -91,7 +91,7 @@ This part demostrates the costumized loss configuration used for training and op
 <h3 align="center"> Train architecture of Discriminator</h3>
 </div>
 
--**Metric:**  optim.Adam(generator.parameters(), lr=2e-4, betas=(0.5, 0.999)) , optim.Adam(generator.parameters(), lr=2e-4, betas=(0.5, 0.999))
+-**Metric:**  optim.Adam(generator.parameters(), lr=2e-4, betas=(0.5, 0.999)) , optim.Adam(discriminator.parameters(), lr=2e-4, betas=(0.5, 0.999))
 
 
 ### 4.4. Train
