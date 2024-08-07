@@ -102,5 +102,9 @@ The model trained for 50 epochs with lr = 0.0002. Best Generator's train loss ob
 </div>
 
 ### 4.5. Evaluate
-In the evaluation section, the methods and metrics used to assess the model's performance are detailed. It explains how the model's segmentation results are quantified and provides insights into the model's effectiveness.
+Result images in different epochs.
+
+<div align="center">
+    <img src="result.jpg" alt="Logo" >
+</div>
 
